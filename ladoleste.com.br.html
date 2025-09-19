@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lado Leste Roleplay - Loja VIP & Coins</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      /* background com sua logo como marca d'água */
+      background: url('https://cdn.discordapp.com/attachments/1401082042468532285/1418462927786082325/wp5906688.jpg?ex=68ce360b&is=68cce48b&hm=4eb97df3df0c037021afc6bb792b69b0ebdb8cc1930f0fad2b35607cd1e5dc3a') no-repeat center center fixed;
+      background-size: 500px;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* sobreposição escura pra melhorar contraste */
+    body::before {
+      content: "";
+      position: fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.7);
+      z-index: -1;
+    }
+
+    header {
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .logo-figurinhas {
+      width: 150px;
+      animation: pulse 3s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.15); opacity: 1; }
+    }
+
+    nav {
+      background: rgba(0,0,0,0.8);
+      padding: 10px 0;
+    }
+    nav a {
+      color: #FFD700;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #fff; }
+
+    section {
+      width: 90%;
+      max-width: 800px;
+      margin: 40px auto;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h2 {
+      color: #FFD700;
+      margin-bottom: 20px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .product:hover {
+      transform: scale(1.05);
+      background: rgba(255,255,255,0.2);
+    }
+
+    .price {
+      font-size: 1.2em;
+      margin: 10px 0;
+      color: #00FF7F;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #FFD700;
+      color: #111;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #FFA500;
+    }
+
+    footer {
+      margin: 40px 0 20px;
+      padding: 20px;
+      background: rgba(0,0,0,0.9);
+      color: #aaa;
+    }
+
+    /* figurinha animada no canto inferior direito */
+    .floating-logo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 120px;
+      animation: floatLogo 4s ease-in-out infinite;
+      z-index: 1000;
+    }
+    @keyframes floatLogo {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://cdn.discordapp.com/attachments/1401082042468532285/1418464471537549392/IMG_20250919_020723_500.webp?ex=68ce377b&is=68cce5fb&hm=6d9a29dc965255e45cd0d0849f0a98826f548d655b1560cd5a501653ce92f459" alt="Logo Lado Leste Roleplay" class="logo-figurinhas">
+    <h1>Lado Leste Roleplay - Loja Oficial</h1>
+    <p>Compre seus VIPs e Coins de forma rápida e segura!</p>
+  </header>
+
+  <nav>
+    <a href="#vip">VIPs</a>
+    <a href="#coins">Coins</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="vip">
+    <h2>VIPs</h2>
+    <div class="product-grid">
+      <div class="product">
+        <h3>VIP 7 Dias</h3>
+        <p class="price">$5</p>
+        <button onclick="window.open('https://www.paypal.com/paypalme/SeuLinkVIP7dias','_blank')">Comprar</button>
+      </div>
+      <div class="product">
+        <h3>VIP 30 Dias</h3>
+        <p class="price">$15</p>
+        <button onclick="window.open('https://www.paypal.com/paypalme/SeuLinkVIP30dias','_blank')">Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="coins">
+    <h2>Coins</h2>
+    <div class="product-grid">
+      <div class="product">
+        <h3>1 Coin</h3>
+        <p class="price">$1</p>
+        <button onclick="window.open('https://www.paypal.com/paypalme/SeuLink1Coin','_blank')">Comprar</button>
+      </div>
+      <div class="product">
+        <h3>5 Coins</h3>
+        <p class="price">$5</p>
+        <button onclick="window.open('https://www.paypal.com/paypalme/SeuLink5Coins','_blank')">Comprar</button>
+      </div>
+      <div class="product">
+        <h3>10 Coins</h3>
+        <p class="price">$10</p>
+        <button onclick="window.open('https://www.paypal.com/paypalme/SeuLink10Coins','_blank')">Comprar</button>
+      </div>
+      <div class="product">
+        <h3>50 Coins</h3>
+        <p class="price">$50</p>
+        <button onclick="window.open('https://www.paypal.com/paypalme/SeuLink50Coins','_blank')">Comprar</button>
+      </div>
+      <div class="product">
+        <h3>100 Coins</h3>
+        <p class="price">$100</p>
+        <button onclick="window.open('https://www.paypal.com/paypalme/SeuLink100Coins','_blank')">Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" style="padding:40px 20px;">
+    <h2>Contato</h2>
+    <p>Se tiver dúvidas ou quiser suporte, fale pelo Discord: <a href="https://discord.gg/UShQQhkGaP" style="color:#FFD700; font-weight:bold;" target="_blank">Nosso Discord</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Lado Leste Roleplay - Todos os direitos reservados.</p>
+  </footer>
+
+  <img src="https://cdn.discordapp.com/attachments/1415024630464385034/1418457537568706600/ChatGPT_Image_13_de_set._de_2025_17_49_26.png?ex=68ce3106&is=68ccdf86&hm=7a9c76173b5eb48347cc7faea1dc6991a420dc87b6b358236ae385d8191d05b2" alt="Logo Figurinha" class="floating-logo">
+
+</body>
+</html>
